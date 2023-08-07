@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$mainPadding: 60px;
+$mainColor: #efe1d1;
+$bcClr: #898787;
+// $bcClr: #331d2c;
+body {
+    background-color: $bcClr;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+    padding: 30px 8px;
+    max-width: 350px;
+    margin: 0 auto;
+    color: $mainColor;
+    .search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        input {
+            flex: 1;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: $mainColor;
+            font-weight: bold;
+            &:focus {
+                outline: none;
+            }
+        }
+        .search-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $mainColor;
+            border-radius: 50%;
+            cursor: pointer;
+            i {
+                color: $bcClr;
+                font-size: 20px;
+            }
+        }
+    }
+    .weather-condition {
+        margin: $mainPadding auto 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        width: fit-content;
+        font-size: 20px;
+        .weather-icon {
+        }
+    }
+    .weather-temp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .temp {
+            h1 {
+                font-size: 60px;
+                .point {
+                    font-size: 40px;
+                }
+            }
+            h2 {
+                font-size: 35px;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .info-container {
+        padding-top: $mainPadding;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        .box {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            gap: 5px;
+            .img {
+                img {
+                    width: 35px;
+                }
+            }
+            .text {
+                h3 {
+                    margin: 5px;
+                }
+                h4 {
+                    text-align: center;
+                    text-transform: capitalize;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
