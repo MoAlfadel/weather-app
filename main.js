@@ -38,7 +38,7 @@ const getData = (apiLink) => {
 
 let weather = (cityName) => {
     getData(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${cityName},&limit=1&appid=${weatherApiKey}`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${cityName},&limit=1&appid=${weatherApiKey}`
     )
         .then((locations) => [locations[0].lat, locations[0].lon])
         .then((latAndLon) => getWeatherData(...latAndLon))
